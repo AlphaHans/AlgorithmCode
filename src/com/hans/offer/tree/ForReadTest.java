@@ -46,7 +46,7 @@ public class ForReadTest {
 
     //---------------------------------------中序遍历-------------------------------
 
-    private static void printMiddle(TreeNode root) {
+    public static void printMiddle(TreeNode root) {
         if (root == null) {
             return;
         }
