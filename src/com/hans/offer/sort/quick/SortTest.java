@@ -8,7 +8,7 @@ import java.util.Arrays;
 public class SortTest {
 
     public static void main(String args[]) {
-        int[] data = {10, 9, 8, 11, 12, 7, 6, 4, 3, 2, 5, 15, -1};
+        int[] data = {10, 9, 8, 11, 12, 7, 6, 4, 3, 2, 5, 15, -1, 9, 9, 9, 9, 9, 9, 99, 9};
         System.out.println(Arrays.toString(QS.sort(data)));
     }
 }

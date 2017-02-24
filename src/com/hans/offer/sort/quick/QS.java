@@ -25,10 +25,10 @@ public class QS {
         int left = start;
         int right = end - 1;
         while (left < right) {
-            while (left < right && data[left] < data[end]) {
+            while (left < right && data[left] <= data[end]) {
                 left++;
             }
-            while (left < right && data[right] > data[end]) {
+            while (left < right && data[right] >= data[end]) {
                 right--;
             }
             swap(data, left, right);
