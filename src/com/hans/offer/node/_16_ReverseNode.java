@@ -30,14 +30,14 @@ public class _16_ReverseNode {
     //循环写法
     private static Node reverseNode2(Node head) {
         Node pre = null;
-        Node node = head;
+        Node next = head;
         Node newHead = null;
-        while (node != null) {
-            Node next = node.next;
-            if (next == null) newHead = node;
-            node.next = pre;
-            pre = node;
-            node = next;
+        while (next != null) {
+            Node node = next.next;
+            if (node == null) newHead = next;
+            next.next = pre;
+            pre = next;
+            next = node;
         }
         return newHead;
     }

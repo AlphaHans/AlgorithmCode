@@ -5,6 +5,9 @@ import java.util.Arrays;
 /**
  * Created by Hans on 17/2/20.
  * 调整数组顺序使奇数位于偶数前面
+ * <p>
+ * 思路1:使用双指针模式:start end 一个一个对换。 不保证原本相对位置
+ * 思路2: 使用直接插入思想。 这样可以保证 保证原本相对位置
  */
 public class _14_ReorderArray {
 

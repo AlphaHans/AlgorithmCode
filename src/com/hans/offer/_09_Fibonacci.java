@@ -2,6 +2,9 @@ package com.hans.offer;
 
 /**
  * Created by Hans on 17/2/19.
+ * 斐波那契数列
+ * 1.递归: 速度奇慢无比,大量重复计算 (要提升递归速度的话,可以使用空间换时间策略,引入Map 。 对所有求过的值进行缓存
+ * 2.for: 保存前面两个值 快速求解后一个,以此循环
  */
 public class _09_Fibonacci {
     public static void main(String args[]) {

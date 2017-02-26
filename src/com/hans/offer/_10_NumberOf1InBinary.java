@@ -3,6 +3,12 @@ package com.hans.offer;
 /**
  * Created by Hans on 17/2/19.
  * 二进制中1的个数
+ * <p>
+ * 二进制中1的个数:
+ * 方法1:使用1 逐位相 & 如果得到的结果是!=0 那么则++   然后1左移一位 重复。  时间复杂度,对于Java是 32。 因为int是32位
+ * <p>
+ * 方法2:时间复杂度:有多少个1就多少次
+ * n=(n-1) & n  通过循环直到n=0的时候,那么就知道一共有多少了。  n-1的话,这样不断借位,在于二进制的体现就是,每次都会有一位从1变成0
  */
 public class _10_NumberOf1InBinary {
 
@@ -11,8 +17,9 @@ public class _10_NumberOf1InBinary {
 //        System.out.println(numberOf1(-10));
         System.out.println(Integer.toBinaryString(10));
         System.out.println(numberOf1_2(-10));
-        System.out.println(numberOf1_3(-10));
     }
+
+
 
     /**
      * 负数的时候会引起死循环  因为负数的最高位是1 负数右移 左边会补1 这样子就会无限循环下去

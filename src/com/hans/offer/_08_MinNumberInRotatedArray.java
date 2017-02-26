@@ -3,6 +3,15 @@ package com.hans.offer;
 /**
  * Created by Hans on 17/2/19.
  * 旋转数组的最小值
+ *
+ * 利用二分查找法的思想以及旋转数组的规律,
+ * 1.每次找中间值,然后判断是处于递增序列还是递减序列,
+ * 2.重复1
+ *
+ * 注意:
+ * 1.旋转数组可以有一个都不移动的情况{1,2,3,4,5,6,7} 移动0位,这也是一个旋转数组。那么这个事后直接返回start=0 即可了,第一位就是最小位。
+ * 2.考虑{2,0,2,2,2,2}的情况,当start mid end三个值都相同的时候,二分查找无法判断是处于递增还是递减序列。 那么直接按序查找就好了, orderSearch(最差O(n) 最好O(1))
+ *
  */
 public class _08_MinNumberInRotatedArray {
     public static void main(String args[]) {

@@ -3,6 +3,13 @@ package com.hans.offer;
 /**
  * Created by Hans on 17/2/20.
  * 数值的整次方
+ * <p>
+ * 思路:
+ * 如果是负数,先转为正数去计算。再根据次数exponent 去判断最终是正还是负
+ * <p>
+ * 思路1: 使用循环,result * = base。 这样会进行很多重复性的计算。 比如 2^6方  需要经过6次循环。 其实可以2^3*2^3 这样只要经过一次 2^3计算,然后再自乘即可
+ * <p>
+ * 思路2:使用递归 result = power(base,exponent>>1)  result*= result; 这样可以只要O(n/2)即可算出来. 不过要注意奇数的情况要最后再result*=base;
  */
 public class _11_Power {
 
@@ -35,6 +42,7 @@ public class _11_Power {
 
     /**
      * 加速版
+     *
      * @param base
      * @param exponent
      * @return

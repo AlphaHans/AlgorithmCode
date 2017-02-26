@@ -28,8 +28,8 @@ public class HeapSort {
      * @param data
      */
     private static void buildMaxHeap(int[] data) {
-        int midPos = (data.length - 1) >> 1;//中间位置就是 非叶子节点的最后一位  (因为他的子节点计算公式是 左=2*i+1 右=2*i+2)
-        for (int i = midPos; i >= 0; i--) {//从最后一个子节点进行最大堆化
+        int pos = (data.length - 1) >> 1;// 非叶子节点的最后一位  (因为他的子节点计算公式是 左=2*i+1 右=2*i+2)
+        for (int i = pos; i >= 0; i--) {//从最后一个子节点进行最大堆化
             maxHeapify(data, i);
         }
     }

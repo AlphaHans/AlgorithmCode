@@ -3,6 +3,8 @@ package com.hans.offer;
 /**
  * Created by Hans on 17/2/20.
  * 打印1到最大的n位数
+ *
+ * 转成字符串去运算,避免溢出. 采用递归
  */
 public class _12_Print1ToMaxOfDigits {
 

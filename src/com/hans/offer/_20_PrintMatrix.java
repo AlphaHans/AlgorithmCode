@@ -3,6 +3,9 @@ package com.hans.offer;
 /**
  * Created by Hans on 17/2/21.
  * 顺时针打印矩阵
+ *
+ * 1.先考虑如何 打印上横 右列 下横 左列  不过要注意,可能只有一横的情况,即startY = endY 所以不要重复打印
+ * 2.然后再考虑如何获得坐标的问题。 实际上就是(start,start) 和 二维数组的行列关系 start<cols/2 && start<rows/2
  */
 public class _20_PrintMatrix {
 

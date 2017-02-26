@@ -22,6 +22,30 @@ public class TreeUtils {
         }
     }
 
+    public static TreeNode makeUnbalanceTree() {
+        TreeNode root = new TreeNode();
+        root.value = 10;
+        TreeNode left = new TreeNode();
+        left.value = 6;
+
+        root.left = left;
+
+        TreeNode ll = new TreeNode();
+        ll.value = 4;
+        TreeNode lr = new TreeNode();
+        lr.value = 8;
+        left.left = ll;
+        left.right = lr;
+
+        TreeNode lll = new TreeNode();
+        lll.value = 3;
+        TreeNode llr = new TreeNode();
+        llr.value = 6;
+        ll.left = lll;
+        ll.right = llr;
+        return root;
+    }
+
     public static TreeNode makeTree() {
         TreeNode root = new TreeNode();
         root.value = 10;
@@ -53,7 +77,6 @@ public class TreeUtils {
         llr.value = 6;
         ll.left = lll;
         ll.right = llr;
-
         return root;
     }
 }
